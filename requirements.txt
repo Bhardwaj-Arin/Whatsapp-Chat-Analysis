@@ -1,8 +1,8 @@
-streamlit
-pandas
-matplotlib
-wordcloud
-urlextract
-emoji
-plotly
-vaderSentiment
+streamlit>=1.33
+pandas>=2.0
+matplotlib>=3.7
+wordcloud>=1.9
+urlextract>=1.8
+emoji>=2.10
+plotly>=5.20
+vaderSentiment>=3.3.2
