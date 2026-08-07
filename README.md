@@ -5,6 +5,8 @@ into a full statistical and behavioral analysis — activity trends, top
 participants, word/emoji usage, sentiment, and reply behavior — with zero
 manual data wrangling required.
 
+**🔗 Live app:** [whatsapp-chat-analysis.streamlit.app](https://whatsapp-chat-analysis-shrkpvsh8wxmujytfkg89k.streamlit.app/)
+
 > 🔒 **Privacy note:** this repo does **not** ship with anyone's real
 > personal chat. No sample chat is bundled by default, since real
 > conversations can't be shared publicly. **To use the app, export your
@@ -59,7 +61,10 @@ whatsapp-chat-analyzer/
     └── whatsapp_analysis.ipynb  # Original exploratory analysis
 ```
 
-## 🚀 Running Locally
+## 🚀 Try It Out
+
+- **Live app:** [whatsapp-chat-analysis.streamlit.app](https://whatsapp-chat-analysis-shrkpvsh8wxmujytfkg89k.streamlit.app/) — no setup required.
+- **Run locally:**
 
 ```bash
 git clone <this-repo>
