@@ -7,6 +7,14 @@ manual data wrangling required.
 
 **🔗 Live app:** [whatsapp-chat-analysis.streamlit.app](https://whatsapp-chat-analysis-shrkpvsh8wxmujytfkg89k.streamlit.app/)
 
+> ⚠️ **Link looking broken / unstyled?** If you clicked this link from
+> GitHub and the page looks like plain text with no icons, colors, or
+> layout, this is a known Chrome/Edge quirk — **not** a bug in the app.
+> Just press **Ctrl+Shift+R** (Windows/Linux) or **Cmd+Shift+R** (Mac)
+> once to fix it. Full explanation in
+> [Troubleshooting](#-troubleshooting-page-looks-broken-when-opened-from-github)
+> below.
+
 > 🔒 **Privacy note:** this repo does **not** ship with anyone's real
 > personal chat. No sample chat is bundled by default, since real
 > conversations can't be shared publicly. **To use the app, export your
@@ -92,3 +100,55 @@ Then open the local URL Streamlit prints (usually `http://localhost:8501`).
   message timing (e.g., a reply is a message from a different user
   within 3 hours of the previous one) rather than actual message-thread
   data, since WhatsApp exports don't include reply references.
+
+## 🛠 Troubleshooting: Page Looks Broken When Opened From GitHub
+
+**Symptom:** you click the live app link from this README (in **Chrome**
+or **Edge**), and instead of the normal colorful Streamlit app, you get a
+plain, unstyled page — text with no layout, and little labels like
+`keyboard_double_arrow_left` where icons should be.
+
+**This is not a bug in the app.** The app itself works fine — you can
+prove that by opening the same link directly (paste it into a new tab,
+or open it in an Incognito window) and it will look completely normal.
+
+**Why it happens, in plain terms:**
+
+Modern Chrome and Edge try to make browsing feel faster by secretly
+"pre-loading" a page in the background *before* you even click a link —
+just because you hovered near it or the page you're on hints that you're
+likely to go there next. This feature is usually invisible and harmless.
+
+But this app isn't a simple webpage — it's a live, interactive app that
+needs to open a real-time connection to fully "wake up" and load its
+fonts, icons, and layout. When Chrome/Edge tries to secretly pre-load it
+in the background, that wake-up process doesn't always finish properly.
+So when you actually click the link, you land on a half-loaded copy of
+the page instead of a fresh one — which is why it looks broken.
+
+(This is also exactly why **Brave** browser doesn't have this problem —
+Brave blocks this kind of background pre-loading by default for privacy
+reasons, so it always does a normal, full page load.)
+
+**How to fix it — pick whichever is easiest for you:**
+
+1. **Quick fix (works every time, no settings needed):**
+   Once the broken page shows up, press:
+   - **Ctrl + Shift + R** (Windows / Linux), or
+   - **Cmd + Shift + R** (Mac)
+
+   This forces the browser to throw away the half-loaded page and load a
+   completely fresh one. The app will now look correct.
+
+2. **Permanent fix (stops it from happening again):**
+   Turn off the browser's background pre-loading feature.
+   - **Chrome:** go to `chrome://settings/performance` → find
+     **"Preload pages"** → set it to **"Standard preloading"** or
+     **"No preloading."**
+   - **Edge:** go to `edge://settings/privacy` → find **"Preload pages
+     for faster browsing and searching"** → turn it **off.**
+
+3. **Simplest workaround:** open the live app link directly in a new tab
+   (copy-paste the URL) instead of clicking it from GitHub, or use
+   Incognito mode, or use Brave — all of these skip the pre-loading
+   behavior entirely and always load the app correctly the first time.
