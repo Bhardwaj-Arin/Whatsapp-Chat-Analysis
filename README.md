@@ -10,8 +10,8 @@ manual data wrangling required.
 > ⚠️ **Link looking broken / unstyled?** If you clicked this link from
 > GitHub and the page looks like plain text with no icons, colors, or
 > layout, this is a known Chrome/Edge quirk — **not** a bug in the app.
-> Just press **Ctrl+Shift+R** (Windows/Linux) or **Cmd+Shift+R** (Mac)
-> once to fix it. Full explanation in
+> **Copy the link above and open it in a new tab (or an Incognito
+> window)** — that reliably fixes it. Full explanation in
 > [Troubleshooting](#-troubleshooting-page-looks-broken-when-opened-from-github)
 > below.
 
@@ -122,9 +122,11 @@ likely to go there next. This feature is usually invisible and harmless.
 But this app isn't a simple webpage — it's a live, interactive app that
 needs to open a real-time connection to fully "wake up" and load its
 fonts, icons, and layout. When Chrome/Edge tries to secretly pre-load it
-in the background, that wake-up process doesn't always finish properly.
-So when you actually click the link, you land on a half-loaded copy of
-the page instead of a fresh one — which is why it looks broken.
+in the background, that wake-up process doesn't finish properly, and
+the browser can keep serving you that same broken, half-loaded copy —
+which is why it looks broken, and why even reloading the page doesn't
+always fix it. Opening the link fresh (new tab or Incognito) forces the
+browser to skip the broken pre-loaded copy and load the real thing.
 
 (This is also exactly why **Brave** browser doesn't have this problem —
 Brave blocks this kind of background pre-loading by default for privacy
@@ -132,13 +134,11 @@ reasons, so it always does a normal, full page load.)
 
 **How to fix it — pick whichever is easiest for you:**
 
-1. **Quick fix (works every time, no settings needed):**
-   Once the broken page shows up, press:
-   - **Ctrl + Shift + R** (Windows / Linux), or
-   - **Cmd + Shift + R** (Mac)
-
-   This forces the browser to throw away the half-loaded page and load a
-   completely fresh one. The app will now look correct.
+1. **Reliable fix:** copy the app's URL and open it in a **new tab**
+   (paste it directly into the address bar), or open it in an
+   **Incognito / Private window**. Both of these skip the background
+   pre-loading entirely, so the app loads fully and correctly the very
+   first time.
 
 2. **Permanent fix (stops it from happening again):**
    Turn off the browser's background pre-loading feature.
@@ -148,7 +148,11 @@ reasons, so it always does a normal, full page load.)
    - **Edge:** go to `edge://settings/privacy` → find **"Preload pages
      for faster browsing and searching"** → turn it **off.**
 
-3. **Simplest workaround:** open the live app link directly in a new tab
-   (copy-paste the URL) instead of clicking it from GitHub, or use
-   Incognito mode, or use Brave — all of these skip the pre-loading
-   behavior entirely and always load the app correctly the first time.
+3. **If you'd rather not change settings:** just use a different browser
+   for this link, like **Brave**, which doesn't do this kind of
+   pre-loading by default.
+
+   *Note: a plain hard refresh (Ctrl+Shift+R / Cmd+Shift+R) does **not**
+   reliably fix this — the browser can still be serving the same
+   pre-loaded copy of the page. Opening the link fresh in a new tab or
+   Incognito window is what actually works.*
